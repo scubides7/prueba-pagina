@@ -1,0 +1,424 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediCare - Servicios Médicos a Domicilio</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav class="navbar">
+            <div class="nav-container">
+                <div class="logo">
+                    <i class="fas fa-heartbeat"></i>
+                    <span>MediCare</span>
+                </div>
+                <ul class="nav-menu">
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#paquetes">Paquetes</a></li>
+                    <li><a href="#equipo">Equipo</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#reservar" class="btn-primary">Reservar</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="inicio" class="hero">
+        <div class="hero-content">
+            <h1>Atención Médica Profesional en tu Hogar</h1>
+            <p>Servicios de enfermería y consultas médicas domiciliarias con profesionales certificados. Comodidad, seguridad y atención personalizada las 24 horas.</p>
+            <div class="hero-buttons">
+                <a href="#reservar" class="btn btn-primary">Reservar Servicio</a>
+                <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
+                <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa conocer más sobre sus servicios médicos domiciliarios.">
+                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
+                </button>
+            </div>
+        </div>
+        <div class="hero-image">
+            <i class="fas fa-user-md"></i>
+        </div>
+    </section>
+
+    <!-- Servicios Section -->
+    <section id="servicios" class="servicios">
+        <div class="container">
+            <h2>Nuestros Servicios Médicos</h2>
+            <p class="section-description">Ofrecemos atención médica integral en la comodidad de tu hogar con profesionales altamente calificados</p>
+            
+            <div class="servicios-grid">
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Cuidado de Enfermería</h3>
+                    <p>Enfermeras profesionales certificadas para cuidados básicos y especializados en tu domicilio</p>
+                    <ul>
+                        <li>Administración de medicamentos</li>
+                        <li>Curaciones y vendajes</li>
+                        <li>Monitoreo de signos vitales</li>
+                        <li>Acompañamiento personalizado</li>
+                    </ul>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-laptop-medical"></i>
+                    </div>
+                    <h3>Telemedicina</h3>
+                    <p>Consultas médicas virtuales con doctores especialistas desde la comodidad de tu hogar</p>
+                    <ul>
+                        <li>Consultas en línea 24/7</li>
+                        <li>Prescripción de medicamentos</li>
+                        <li>Seguimiento médico continuo</li>
+                        <li>Especialistas disponibles</li>
+                    </ul>
+                </div>
+
+                <div class="servicio-card">
+                    <div class="card-icon">
+                        <i class="fas fa-house-medical"></i>
+                    </div>
+                    <h3>Visitas Médicas</h3>
+                    <p>Médicos especialistas que se desplazan a tu domicilio para consultas y tratamientos</p>
+                    <ul>
+                        <li>Consultas domiciliarias</li>
+                        <li>Exámenes médicos básicos</li>
+                        <li>Tratamientos especializados</li>
+                        <li>Seguimiento post-hospitalario</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Paquetes Section -->
+    <section id="paquetes" class="paquetes">
+        <div class="container">
+            <h2>Paquetes de Atención</h2>
+            <p class="section-description">Elige el plan que mejor se adapte a tus necesidades de salud y presupuesto</p>
+            
+            <div class="paquetes-grid">
+                <div class="paquete-card">
+                    <h3>Básico 8h</h3>
+                    <div class="precio">$150.000 <span>COP por día</span></div>
+                    <ul>
+                        <li>8 horas de cuidado</li>
+                        <li>Enfermera certificada</li>
+                        <li>Administración de medicamentos</li>
+                        <li>Monitoreo básico</li>
+                        <li>Acompañamiento diurno</li>
+                    </ul>
+                    <div class="paquete-buttons">
+                        <button class="btn btn-outline">Seleccionar Plan</button>
+                        <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa el paquete Básico 8h de $150.000. ¿Podrían darme más información?">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="paquete-card destacado">
+                    <div class="badge">Recomendado</div>
+                    <h3>Básico 12h</h3>
+                    <div class="precio">$220.000 <span>COP por día</span></div>
+                    <ul>
+                        <li>12 horas de cuidado</li>
+                        <li>Enfermera certificada</li>
+                        <li>Administración de medicamentos</li>
+                        <li>Monitoreo continuo</li>
+                        <li>Cuidado día/noche</li>
+                    </ul>
+                    <div class="paquete-buttons">
+                        <button class="btn btn-primary">Seleccionar Plan</button>
+                        <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa el paquete Básico 12h de $220.000 (Recomendado). ¿Podrían darme más información?">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="paquete-card">
+                    <h3>Telemedicina +</h3>
+                    <div class="precio">$305.000 <span>COP por día</span></div>
+                    <ul>
+                        <li>8h enfermería + Telemedicina</li>
+                        <li>Consultas virtuales ilimitadas</li>
+                        <li>Médico disponible 24/7</li>
+                        <li>Prescripción de medicamentos</li>
+                        <li>Seguimiento médico continuo</li>
+                    </ul>
+                    <div class="paquete-buttons">
+                        <button class="btn btn-outline">Seleccionar Plan</button>
+                        <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa el paquete Telemedicina+ de $305.000. ¿Podrían darme más información?">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+
+                <div class="paquete-card">
+                    <h3>Premium</h3>
+                    <div class="precio">$510.000 <span>COP por día</span></div>
+                    <ul>
+                        <li>12h enfermería + Visitas médicas</li>
+                        <li>Médico a domicilio</li>
+                        <li>Telemedicina incluida</li>
+                        <li>Exámenes médicos básicos</li>
+                        <li>Atención personalizada VIP</li>
+                    </ul>
+                    <div class="paquete-buttons">
+                        <button class="btn btn-outline">Seleccionar Plan</button>
+                        <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa el paquete Premium de $510.000. ¿Podrían darme más información?">
+                            <i class="fab fa-whatsapp"></i> Consultar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Equipo Section -->
+    <section id="equipo" class="equipo">
+        <div class="container">
+            <h2>Nuestro Equipo Médico</h2>
+            <p class="section-description">Profesionales certificados y experimentados comprometidos con tu bienestar</p>
+            
+            <div class="equipo-grid">
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dra. Ana Martínez</h3>
+                    <p class="especialidad">Medicina Interna</p>
+                    <p class="experiencia">15 años de experiencia en medicina domiciliaria</p>
+                    <p class="educacion">UNAM, Especialidad IMSS</p>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Enf. Carlos Ruiz</h3>
+                    <p class="especialidad">Enfermería Geriátrica</p>
+                    <p class="experiencia">12 años especializándose en cuidado domiciliario</p>
+                    <p class="educacion">IPN, Certificación Geriátrica</p>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-nurse"></i>
+                    </div>
+                    <h3>Enf. María López</h3>
+                    <p class="especialidad">Cuidados Intensivos</p>
+                    <p class="experiencia">10 años en UCI y cuidados especializados</p>
+                    <p class="educacion">UAM, Especialidad UCI</p>
+                </div>
+
+                <div class="doctor-card">
+                    <div class="doctor-image">
+                        <i class="fas fa-user-md"></i>
+                    </div>
+                    <h3>Dr. Roberto Silva</h3>
+                    <p class="especialidad">Geriatría</p>
+                    <p class="experiencia">20 años especializándose en adultos mayores</p>
+                    <p class="educacion">UNAM, Posgrado Geriatría</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Formulario de Reserva -->
+    <section id="reservar" class="reservar">
+        <div class="container">
+            <h2>Reserva tu Servicio</h2>
+            <p class="section-description">Completa el formulario y nos pondremos en contacto contigo en menos de 2 horas</p>
+            
+            <form class="reserva-form" id="reservaForm">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="nombre">Nombre completo del paciente *</label>
+                        <input type="text" id="nombre" name="nombre" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="edad">Edad *</label>
+                        <input type="number" id="edad" name="edad" required>
+                    </div>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="telefono">Teléfono de contacto *</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Correo electrónico</label>
+                        <input type="email" id="email" name="email">
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="direccion">Dirección completa *</label>
+                    <input type="text" id="direccion" name="direccion" required>
+                </div>
+
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="paquete">Paquete de servicio *</label>
+                        <select id="paquete" name="paquete" required>
+                            <option value="">Selecciona un paquete</option>
+                            <option value="basico-8h">Básico 8h - $150.000</option>
+                            <option value="basico-12h">Básico 12h - $220.000</option>
+                            <option value="telemedicina">Telemedicina + - $305.000</option>
+                            <option value="premium">Premium - $510.000</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="fecha">Fecha de inicio *</label>
+                        <input type="date" id="fecha" name="fecha" required>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label for="condiciones">Condiciones médicas y necesidades especiales</label>
+                    <textarea id="condiciones" name="condiciones" rows="4"></textarea>
+                </div>
+
+                <div class="form-group checkbox-group">
+                    <label class="checkbox-label">
+                        <input type="checkbox" id="terminos" name="terminos" required>
+                        <span class="checkmark"></span>
+                        Acepto los términos y condiciones y la política de privacidad *
+                    </label>
+                </div>
+
+                <button type="submit" class="btn btn-primary btn-large">Enviar Solicitud</button>
+                <p class="form-note">Nos pondremos en contacto contigo en menos de 2 horas para confirmar tu servicio</p>
+            </form>
+        </div>
+    </section>
+
+    <!-- Contacto Section -->
+    <section id="contacto" class="contacto">
+        <div class="container">
+            <h2>Contacto y Emergencias</h2>
+            <p class="section-description">Estamos disponibles las 24 horas para atender tus necesidades de salud</p>
+            
+            <div class="contacto-grid">
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-phone-alt"></i>
+                    </div>
+                    <h3>Línea de Emergencia</h3>
+                    <p>Disponible 24/7 para urgencias médicas</p>
+                    <a href="tel:+5715551234" class="contacto-link">+57 1 555 1234</a>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-calendar-check"></i>
+                    </div>
+                    <h3>Reservas y Citas</h3>
+                    <p>Programa tu servicio con anticipación</p>
+                    <a href="tel:+5715554321" class="contacto-link">+57 1 555 4321</a>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-envelope"></i>
+                    </div>
+                    <h3>Correo Electrónico</h3>
+                    <p>Para consultas generales e información</p>
+                    <a href="mailto:info@medicare.com" class="contacto-link">info@medicare.com</a>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fab fa-whatsapp"></i>
+                    </div>
+                    <h3>WhatsApp</h3>
+                    <p>Contacto rápido y directo</p>
+                    <button class="btn btn-whatsapp contacto-link" data-message="¡Hola! Necesito información sobre los servicios médicos domiciliarios.">
+                        Escribir por WhatsApp
+                    </button>
+                </div>
+
+                <div class="contacto-card">
+                    <div class="contacto-icon">
+                        <i class="fas fa-map-marker-alt"></i>
+                    </div>
+                    <h3>Ubicación</h3>
+                    <p>Carrera 7 #123-45, Zona Rosa, Bogotá</p>
+                    <p class="horarios">Oficinas: Lun-Vie 8:00 AM - 6:00 PM</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <div class="logo">
+                        <i class="fas fa-heartbeat"></i>
+                        <span>MediCare</span>
+                    </div>
+                    <p>Atención médica profesional y cuidado de enfermería en la comodidad de tu hogar.</p>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Servicios</h4>
+                    <ul>
+                        <li><a href="#servicios">Cuidado de Enfermería</a></li>
+                        <li><a href="#servicios">Telemedicina</a></li>
+                        <li><a href="#servicios">Visitas Médicas</a></li>
+                        <li><a href="#contacto">Emergencias 24/7</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Empresa</h4>
+                    <ul>
+                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#equipo">Nuestro Equipo</a></li>
+                        <li><a href="#">Certificaciones</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h4>Legal</h4>
+                    <ul>
+                        <li><a href="#">Términos y Condiciones</a></li>
+                        <li><a href="#">Política de Privacidad</a></li>
+                        <li><a href="#">Aviso de Privacidad</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2024 MediCare. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Botón flotante de WhatsApp -->
+    <div class="whatsapp-float">
+        <button class="whatsapp-btn" data-message="¡Hola! Me gustaría obtener información sobre sus servicios médicos domiciliarios. ¿Podrían ayudarme?">
+            <i class="fab fa-whatsapp"></i>
+        </button>
+        <span class="whatsapp-tooltip">¿Necesitas ayuda? Escríbenos</span>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
