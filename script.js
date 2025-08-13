@@ -203,7 +203,7 @@ function getFieldName(field) {
 
 // Función para enviar correo electrónico
 function sendEmail(data) {
-    const emailDestino = 'sc.cubides6@gmail.com';
+    const emailDestino = 'prueba@gmail.com';
     const asunto = `Nueva solicitud de servicio médico - ${data.nombre}`;
     
     // Formatear los datos del formulario
