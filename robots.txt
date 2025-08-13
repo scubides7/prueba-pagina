@@ -1,0 +1,23 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://fiarsalud.com/sitemap.xml
+
+# Crawl-delay para bots más lentos
+Crawl-delay: 1
+
+# Bloquear archivos no necesarios para SEO
+Disallow: /script.js
+Disallow: /styles.css
+Disallow: *.pdf
+Disallow: /private/
+Disallow: /admin/
+
+# Permitir acceso a imágenes para Google Images
+User-agent: Googlebot-Image
+Allow: *.jpg
+Allow: *.jpeg
+Allow: *.png
+Allow: *.webp
+Allow: *.svg

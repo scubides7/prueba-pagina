@@ -3,18 +3,47 @@ document.addEventListener('DOMContentLoaded', function() {
     const hamburger = document.querySelector('.hamburger');
     const navMenu = document.querySelector('.nav-menu');
 
-    hamburger.addEventListener('click', function() {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
-    });
-
-    // Cerrar menú al hacer click en un enlace
-    document.querySelectorAll('.nav-menu a').forEach(link => {
-        link.addEventListener('click', () => {
-            hamburger.classList.remove('active');
-            navMenu.classList.remove('active');
+    if (hamburger && navMenu) {
+        hamburger.addEventListener('click', function() {
+            const isExpanded = hamburger.getAttribute('aria-expanded') === 'true';
+            
+            hamburger.classList.toggle('active');
+            navMenu.classList.toggle('active');
+            
+            // Actualizar atributos ARIA
+            hamburger.setAttribute('aria-expanded', !isExpanded);
+            navMenu.setAttribute('aria-hidden', isExpanded);
+            
+            // Enfocar el primer enlace cuando se abre el menú
+            if (!isExpanded) {
+                const firstLink = navMenu.querySelector('a');
+                if (firstLink) {
+                    setTimeout(() => firstLink.focus(), 100);
+                }
+            }
         });
-    });
+
+        // Cerrar menú al hacer click en un enlace
+        document.querySelectorAll('.nav-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.setAttribute('aria-hidden', 'true');
+            });
+        });
+
+        // Cerrar menú con Escape
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape' && navMenu.classList.contains('active')) {
+                hamburger.classList.remove('active');
+                navMenu.classList.remove('active');
+                hamburger.setAttribute('aria-expanded', 'false');
+                navMenu.setAttribute('aria-hidden', 'true');
+                hamburger.focus();
+            }
+        });
+    }
 });
 
 // Función para el scroll suave
@@ -196,7 +225,7 @@ Condiciones médicas y necesidades especiales:
 ${data.condiciones || 'No especificadas'}
 
 ---
-Este mensaje fue enviado desde el formulario de contacto de MediCare.
+Este mensaje fue enviado desde el formulario de contacto de FiarSalud.
 Fecha de envío: ${new Date().toLocaleString('es-ES')}
     `.trim();
     
@@ -422,11 +451,13 @@ document.addEventListener('DOMContentLoaded', function() {
     if (hamburger) {
         hamburger.setAttribute('aria-label', 'Abrir menú de navegación');
         hamburger.setAttribute('aria-expanded', 'false');
+        hamburger.setAttribute('aria-controls', 'nav-menu');
         
-        hamburger.addEventListener('click', function() {
-            const isExpanded = this.getAttribute('aria-expanded') === 'true';
-            this.setAttribute('aria-expanded', !isExpanded);
-        });
+        const navMenu = document.querySelector('.nav-menu');
+        if (navMenu) {
+            navMenu.setAttribute('id', 'nav-menu');
+            navMenu.setAttribute('aria-hidden', 'true');
+        }
     }
     
     // Agregar etiquetas alt a iconos importantes
@@ -436,5 +467,101 @@ document.addEventListener('DOMContentLoaded', function() {
             icon.setAttribute('role', 'img');
             icon.setAttribute('aria-hidden', 'true');
         }
+    });
+
+    // Mejorar accesibilidad de formularios
+    const form = document.getElementById('reservaForm');
+    if (form) {
+        // Agregar live region para anuncios
+        const liveRegion = document.createElement('div');
+        liveRegion.setAttribute('aria-live', 'polite');
+        liveRegion.setAttribute('aria-atomic', 'true');
+        liveRegion.className = 'sr-only';
+        liveRegion.id = 'form-announcements';
+        form.appendChild(liveRegion);
+    }
+
+    // Mejorar navegación por teclado
+    document.addEventListener('keydown', function(e) {
+        // Skip links para navegación por teclado
+        if (e.key === 'Tab' && e.target === document.body) {
+            const skipLink = document.createElement('a');
+            skipLink.href = '#main-content';
+            skipLink.textContent = 'Saltar al contenido principal';
+            skipLink.className = 'skip-link sr-only';
+            skipLink.style.cssText = `
+                position: absolute;
+                top: 10px;
+                left: 10px;
+                background: var(--primary-color);
+                color: white;
+                padding: 8px 12px;
+                text-decoration: none;
+                z-index: 9999;
+                border-radius: 4px;
+            `;
+            document.body.insertBefore(skipLink, document.body.firstChild);
+            
+            skipLink.addEventListener('focus', function() {
+                this.classList.remove('sr-only');
+            });
+            
+            skipLink.addEventListener('blur', function() {
+                this.classList.add('sr-only');
+            });
+        }
+    });
+});
+
+// Optimización de performance - Lazy loading para elementos no críticos
+function initLazyLoading() {
+    if ('IntersectionObserver' in window) {
+        const lazyElements = document.querySelectorAll('[data-lazy]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const element = entry.target;
+                    const src = element.getAttribute('data-lazy');
+                    if (src) {
+                        element.src = src;
+                        element.removeAttribute('data-lazy');
+                    }
+                    observer.unobserve(element);
+                }
+            });
+        });
+
+        lazyElements.forEach(element => imageObserver.observe(element));
+    }
+}
+
+// SEO y Analytics (placeholder para Google Analytics)
+function initAnalytics() {
+    // Placeholder para Google Analytics o similar
+    if (typeof gtag !== 'undefined') {
+        gtag('config', 'GA_MEASUREMENT_ID', {
+            page_title: document.title,
+            page_location: window.location.href
+        });
+    }
+}
+
+// Inicializar funciones de optimización
+document.addEventListener('DOMContentLoaded', function() {
+    initLazyLoading();
+    initAnalytics();
+    
+    // Preload crítico
+    const criticalResources = [
+        'styles.css',
+        'script.js'
+    ];
+    
+    criticalResources.forEach(resource => {
+        const link = document.createElement('link');
+        link.rel = 'preload';
+        link.href = resource;
+        link.as = resource.endsWith('.css') ? 'style' : 'script';
+        document.head.appendChild(link);
     });
 });

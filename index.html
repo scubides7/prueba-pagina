@@ -3,105 +3,202 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediCare - Servicios Médicos a Domicilio</title>
+    
+    <!-- SEO Meta Tags -->
+    <title>FiarSalud - Servicios Médicos a Domicilio en Bogotá | Enfermería y Telemedicina</title>
+    <meta name="description" content="Servicios médicos domiciliarios en Bogotá. Enfermería profesional, telemedicina y visitas médicas las 24 horas. Atención personalizada en la comodidad de tu hogar.">
+    <meta name="keywords" content="servicios médicos domicilio, enfermería domiciliaria, telemedicina, cuidado enfermería, médicos domicilio Bogotá, atención médica hogar">
+    <meta name="author" content="FiarSalud">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="Spanish">
+    <meta name="geo.region" content="CO-DC">
+    <meta name="geo.placename" content="Bogotá">
+    <meta name="geo.position" content="4.7110;-74.0721">
+    <meta name="ICBM" content="4.7110, -74.0721">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://fiarsalud.com/">
+    <meta property="og:title" content="FiarSalud - Servicios Médicos a Domicilio en Bogotá">
+    <meta property="og:description" content="Servicios médicos domiciliarios profesionales. Enfermería, telemedicina y visitas médicas las 24 horas en Bogotá.">
+    <meta property="og:image" content="https://fiarsalud.com/images/fiarsalud-og-image.jpg">
+    <meta property="og:locale" content="es_CO">
+    <meta property="og:site_name" content="FiarSalud">
+    
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://fiarsalud.com/">
+    <meta property="twitter:title" content="FiarSalud - Servicios Médicos a Domicilio">
+    <meta property="twitter:description" content="Atención médica profesional en tu hogar. Enfermería, telemedicina y visitas médicas 24/7.">
+    <meta property="twitter:image" content="https://fiarsalud.com/images/fiarsalud-twitter-image.jpg">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://fiarsalud.com/">
+    
+    <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "MedicalBusiness",
+        "name": "FiarSalud",
+        "description": "Servicios médicos domiciliarios profesionales en Bogotá",
+        "url": "https://fiarsalud.com",
+        "telephone": "+57-1-555-1234",
+        "email": "info@fiarsalud.com",
+        "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Carrera 7 #123-45",
+            "addressLocality": "Bogotá",
+            "addressRegion": "Cundinamarca",
+            "postalCode": "110231",
+            "addressCountry": "CO"
+        },
+        "geo": {
+            "@type": "GeoCoordinates",
+            "latitude": 4.7110,
+            "longitude": -74.0721
+        },
+        "openingHours": "Mo-Fr 08:00-18:00",
+        "serviceArea": {
+            "@type": "GeoCircle",
+            "geoMidpoint": {
+                "@type": "GeoCoordinates",
+                "latitude": 4.7110,
+                "longitude": -74.0721
+            },
+            "geoRadius": "50000"
+        },
+        "medicalSpecialty": [
+            "Nursing",
+            "Telemedicine",
+            "Home Care",
+            "Geriatrics"
+        ],
+        "sameAs": [
+            "https://www.facebook.com/fiarsalud",
+            "https://www.instagram.com/fiarsalud"
+        ]
+    }
+    </script>
+    
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
 </head>
 <body>
     <!-- Header -->
-    <header class="header">
-        <nav class="navbar">
+    <header class="header" role="banner">
+        <nav class="navbar" role="navigation" aria-label="Navegación principal">
             <div class="nav-container">
                 <div class="logo">
-                    <i class="fas fa-heartbeat"></i>
-                    <span>MediCare</span>
+                    <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                    <span>FiarSalud</span>
                 </div>
-                <ul class="nav-menu">
-                    <li><a href="#inicio">Inicio</a></li>
-                    <li><a href="#servicios">Servicios</a></li>
-                    <li><a href="#paquetes">Paquetes</a></li>
-                    <li><a href="#equipo">Equipo</a></li>
-                    <li><a href="#contacto">Contacto</a></li>
-                    <li><a href="#reservar" class="btn-primary">Reservar</a></li>
+                <ul class="nav-menu" role="menubar">
+                    <li role="none"><a href="#inicio" role="menuitem">Inicio</a></li>
+                    <li role="none"><a href="#servicios" role="menuitem">Servicios</a></li>
+                    <li role="none"><a href="#paquetes" role="menuitem">Paquetes</a></li>
+                    <li role="none"><a href="#equipo" role="menuitem">Equipo</a></li>
+                    <li role="none"><a href="#contacto" role="menuitem">Contacto</a></li>
+                    <li role="none"><a href="#reservar" role="menuitem">Reservar</a></li>
                 </ul>
-                <div class="hamburger">
+                <button class="hamburger" aria-label="Abrir menú de navegación" aria-expanded="false" aria-controls="nav-menu">
                     <span></span>
                     <span></span>
                     <span></span>
-                </div>
+                </button>
             </div>
         </nav>
     </header>
 
     <!-- Hero Section -->
-    <section id="inicio" class="hero">
-        <div class="hero-content">
-            <h1>Atención Médica Profesional en tu Hogar</h1>
-            <p>Servicios de enfermería y consultas médicas domiciliarias con profesionales certificados. Comodidad, seguridad y atención personalizada las 24 horas.</p>
-            <div class="hero-buttons">
-                <a href="#reservar" class="btn btn-primary">Reservar Servicio</a>
-                <a href="#servicios" class="btn btn-secondary">Ver Servicios</a>
-                <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa conocer más sobre sus servicios médicos domiciliarios.">
-                    <i class="fab fa-whatsapp"></i> Consultar por WhatsApp
-                </button>
+    <main>
+        <section id="inicio" class="hero" role="banner">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Atención Médica Profesional en tu Hogar</h1>
+                    <p>Servicios de enfermería y consultas médicas domiciliarias con profesionales certificados. Comodidad, seguridad y atención personalizada las 24 horas.</p>
+                    <div class="hero-buttons">
+                        <a href="#reservar" class="btn btn-primary" aria-label="Reservar servicio médico">Reservar Servicio</a>
+                        <a href="#servicios" class="btn btn-secondary" aria-label="Ver todos los servicios">Ver Servicios</a>
+                        <button class="btn btn-whatsapp" data-message="¡Hola! Me interesa conocer más sobre sus servicios médicos domiciliarios." aria-label="Contactar por WhatsApp">
+                            <i class="fab fa-whatsapp" aria-hidden="true"></i> Consultar por WhatsApp
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image" aria-hidden="true">
+                    <i class="fas fa-user-md"></i>
+                </div>
             </div>
-        </div>
-        <div class="hero-image">
-            <i class="fas fa-user-md"></i>
+        </section>
         </div>
     </section>
 
-    <!-- Servicios Section -->
-    <section id="servicios" class="servicios">
-        <div class="container">
-            <h2>Nuestros Servicios Médicos</h2>
-            <p class="section-description">Ofrecemos atención médica integral en la comodidad de tu hogar con profesionales altamente calificados</p>
-            
-            <div class="servicios-grid">
-                <div class="servicio-card">
-                    <div class="card-icon">
-                        <i class="fas fa-user-nurse"></i>
-                    </div>
-                    <h3>Cuidado de Enfermería</h3>
-                    <p>Enfermeras profesionales certificadas para cuidados básicos y especializados en tu domicilio</p>
-                    <ul>
-                        <li>Administración de medicamentos</li>
-                        <li>Curaciones y vendajes</li>
-                        <li>Monitoreo de signos vitales</li>
-                        <li>Acompañamiento personalizado</li>
-                    </ul>
-                </div>
+        <!-- Servicios Section -->
+        <section id="servicios" class="servicios" aria-labelledby="servicios-title">
+            <div class="container">
+                <header class="section-header">
+                    <h2 id="servicios-title">Nuestros Servicios Médicos</h2>
+                    <p class="section-description">Ofrecemos atención médica integral en la comodidad de tu hogar con profesionales altamente calificados</p>
+                </header>
+                
+                <div class="servicios-grid" role="list">
+                    <article class="servicio-card" role="listitem">
+                        <header class="card-header">
+                            <div class="card-icon" aria-hidden="true">
+                                <i class="fas fa-user-nurse"></i>
+                            </div>
+                            <h3>Cuidado de Enfermería</h3>
+                        </header>
+                        <p>Enfermeras profesionales certificadas para cuidados básicos y especializados en tu domicilio</p>
+                        <ul aria-label="Servicios incluidos en cuidado de enfermería">
+                            <li>Administración de medicamentos</li>
+                            <li>Curaciones y vendajes</li>
+                            <li>Monitoreo de signos vitales</li>
+                            <li>Acompañamiento personalizado</li>
+                        </ul>
+                    </article>
 
-                <div class="servicio-card">
-                    <div class="card-icon">
-                        <i class="fas fa-laptop-medical"></i>
-                    </div>
-                    <h3>Telemedicina</h3>
-                    <p>Consultas médicas virtuales con doctores especialistas desde la comodidad de tu hogar</p>
-                    <ul>
-                        <li>Consultas en línea 24/7</li>
-                        <li>Prescripción de medicamentos</li>
-                        <li>Seguimiento médico continuo</li>
-                        <li>Especialistas disponibles</li>
-                    </ul>
-                </div>
+                    <article class="servicio-card" role="listitem">
+                        <header class="card-header">
+                            <div class="card-icon" aria-hidden="true">
+                                <i class="fas fa-laptop-medical"></i>
+                            </div>
+                            <h3>Telemedicina</h3>
+                        </header>
+                        <p>Consultas médicas virtuales con doctores especialistas desde la comodidad de tu hogar</p>
+                        <ul aria-label="Servicios incluidos en telemedicina">
+                            <li>Consultas en línea 24/7</li>
+                            <li>Prescripción de medicamentos</li>
+                            <li>Seguimiento médico continuo</li>
+                            <li>Especialistas disponibles</li>
+                        </ul>
+                    </article>
 
-                <div class="servicio-card">
-                    <div class="card-icon">
-                        <i class="fas fa-house-medical"></i>
-                    </div>
-                    <h3>Visitas Médicas</h3>
-                    <p>Médicos especialistas que se desplazan a tu domicilio para consultas y tratamientos</p>
-                    <ul>
-                        <li>Consultas domiciliarias</li>
-                        <li>Exámenes médicos básicos</li>
-                        <li>Tratamientos especializados</li>
-                        <li>Seguimiento post-hospitalario</li>
-                    </ul>
+                    <article class="servicio-card" role="listitem">
+                        <header class="card-header">
+                            <div class="card-icon" aria-hidden="true">
+                                <i class="fas fa-house-medical"></i>
+                            </div>
+                            <h3>Visitas Médicas</h3>
+                        </header>
+                        <p>Médicos especialistas que se desplazan a tu domicilio para consultas y tratamientos</p>
+                        <ul aria-label="Servicios incluidos en visitas médicas">
+                            <li>Consultas domiciliarias</li>
+                            <li>Exámenes médicos básicos</li>
+                            <li>Tratamientos especializados</li>
+                            <li>Seguimiento post-hospitalario</li>
+                        </ul>
+                    </article>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
     <!-- Paquetes Section -->
     <section id="paquetes" class="paquetes">
@@ -337,7 +434,7 @@
                     </div>
                     <h3>Correo Electrónico</h3>
                     <p>Para consultas generales e información</p>
-                    <a href="mailto:info@medicare.com" class="contacto-link">info@medicare.com</a>
+                    <a href="mailto:info@fiarsalud.com" class="contacto-link">info@fiarsalud.com</a>
                 </div>
 
                 <div class="contacto-card">
@@ -360,22 +457,22 @@
                     <p class="horarios">Oficinas: Lun-Vie 8:00 AM - 6:00 PM</p>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+    </main>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" role="contentinfo">
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
                     <div class="logo">
-                        <i class="fas fa-heartbeat"></i>
-                        <span>MediCare</span>
+                        <i class="fas fa-heartbeat" aria-hidden="true"></i>
+                        <span>FiarSalud</span>
                     </div>
                     <p>Atención médica profesional y cuidado de enfermería en la comodidad de tu hogar.</p>
                 </div>
 
-                <div class="footer-section">
+                <nav class="footer-section" aria-label="Enlaces de servicios">
                     <h4>Servicios</h4>
                     <ul>
                         <li><a href="#servicios">Cuidado de Enfermería</a></li>
@@ -383,40 +480,44 @@
                         <li><a href="#servicios">Visitas Médicas</a></li>
                         <li><a href="#contacto">Emergencias 24/7</a></li>
                     </ul>
-                </div>
+                </nav>
 
-                <div class="footer-section">
+                <nav class="footer-section" aria-label="Enlaces de empresa">
                     <h4>Empresa</h4>
                     <ul>
-                        <li><a href="#">Sobre Nosotros</a></li>
+                        <li><a href="#" aria-label="Información sobre nosotros">Sobre Nosotros</a></li>
                         <li><a href="#equipo">Nuestro Equipo</a></li>
-                        <li><a href="#">Certificaciones</a></li>
-                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#" aria-label="Ver certificaciones">Certificaciones</a></li>
+                        <li><a href="#" aria-label="Oportunidades de trabajo">Trabaja con Nosotros</a></li>
                     </ul>
-                </div>
+                </nav>
 
-                <div class="footer-section">
+                <nav class="footer-section" aria-label="Enlaces legales">
                     <h4>Legal</h4>
                     <ul>
-                        <li><a href="#">Términos y Condiciones</a></li>
-                        <li><a href="#">Política de Privacidad</a></li>
-                        <li><a href="#">Aviso de Privacidad</a></li>
+                        <li><a href="#" aria-label="Ver términos y condiciones">Términos y Condiciones</a></li>
+                        <li><a href="#" aria-label="Ver política de privacidad">Política de Privacidad</a></li>
+                        <li><a href="#" aria-label="Ver aviso de privacidad">Aviso de Privacidad</a></li>
                     </ul>
-                </div>
+                </nav>
             </div>
 
             <div class="footer-bottom">
-                <p>&copy; 2024 MediCare. Todos los derechos reservados.</p>
+                <p>&copy; 2024 FiarSalud. Todos los derechos reservados.</p>
             </div>
         </div>
     </footer>
 
     <!-- Botón flotante de WhatsApp -->
-    <div class="whatsapp-float">
-        <button class="whatsapp-btn" data-message="¡Hola! Me gustaría obtener información sobre sus servicios médicos domiciliarios. ¿Podrían ayudarme?">
-            <i class="fab fa-whatsapp"></i>
+    <div class="whatsapp-float" role="complementary" aria-label="Asistencia por WhatsApp">
+        <button class="whatsapp-btn" 
+                data-message="¡Hola! Me gustaría obtener información sobre sus servicios médicos domiciliarios. ¿Podrían ayudarme?" 
+                aria-label="Contactar por WhatsApp para obtener asistencia inmediata"
+                title="Contactar por WhatsApp">
+            <i class="fab fa-whatsapp" aria-hidden="true"></i>
+            <span class="sr-only">Contactar por WhatsApp</span>
         </button>
-        <span class="whatsapp-tooltip">¿Necesitas ayuda? Escríbenos</span>
+        <span class="whatsapp-tooltip" role="tooltip" aria-hidden="true">¿Necesitas ayuda? Escríbenos</span>
     </div>
 
     <script src="script.js"></script>
