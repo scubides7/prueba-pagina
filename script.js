@@ -238,7 +238,7 @@ Fecha de envío: ${new Date().toLocaleString('es-ES')}
 
 // Función para abrir WhatsApp
 function openWhatsApp(message = '') {
-    const phoneNumber = '573506629687'; // Cambia este número por el tuyo (formato: código país + número sin +)
+    const phoneNumber = '573043369809'; // Cambia este número por el tuyo (formato: código país + número sin +)
     const defaultMessage = message || '¡Hola! Me interesa conocer más sobre sus servicios médicos domiciliarios.';
     const encodedMessage = encodeURIComponent(defaultMessage);
     const whatsappUrl = `https://wa.me/${phoneNumber}?text=${encodedMessage}`;
